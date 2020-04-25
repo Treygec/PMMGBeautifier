@@ -6,21 +6,19 @@ import { ParseETAs } from "./ParseETAs";
 import { PostLMPrice } from "./PostLMPrice";
 import { ShippingAds } from "./ShippingAds";
 import { SnipLongUsernamesInChat } from "./SnipLongUsernamesInChat";
-import { OrderInventory } from "./OrderInventory";
-
-const localMarketAds = new LocalMarketAds();
-const parseETAs = new ParseETAs();
-const orderETAs = new OrderETAs();
-const flightplanETAs = new FlightplanETAs();
-const snipLongUsernamesInChat = new SnipLongUsernamesInChat();
-const shippingAds = new ShippingAds();
-const orderInventory = new OrderInventory();
+import { SortInventory } from "./SortInventory";
+import { PostLMButton } from "./PostLMButton";
 
 const runner = new ModuleRunner([
-  localMarketAds, shippingAds, parseETAs,
-  orderETAs, flightplanETAs, snipLongUsernamesInChat,
-  orderInventory,
-  new PostLMPrice()
+  new LocalMarketAds(),
+  new ParseETAs(),
+  new OrderETAs(),
+  new FlightplanETAs(),
+  new SnipLongUsernamesInChat(),
+  new ShippingAds(),
+  new SortInventory(),
+  new PostLMPrice(),
+  new PostLMButton(),
 ]);
 (function () {
   runner.loop()
