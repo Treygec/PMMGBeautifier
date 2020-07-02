@@ -9,4 +9,5 @@ export enum Style {
   FontsRegular = "fonts__font-regular___w47oqm8",
   InventorySortControlsCriteria = "InventorySortControls__criteria___1UBEZGp",
   InventorySortControlsOrder = "InventorySortControls__order___2snExpX",
+  LocalMarketSortControlsHeading = "SectionHeader__container___O8miwZz"
 }
